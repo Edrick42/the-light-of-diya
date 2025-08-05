@@ -354,7 +354,7 @@ nav a:hover {
 
 .footer {
   background-color: var(--off-white);
-  padding: 2rem;
+  padding: 1rem;
   text-align: center;
   font-size: 0.9rem;
 }
@@ -365,7 +365,7 @@ nav a:hover {
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  padding: 0 2rem;
+  padding: 0 10rem;
 }
 
 .footer-icons a {
