@@ -98,7 +98,7 @@ header {
   flex-direction: row; 
   align-items: center;
   justify-content: space-between; 
-  padding: 1rem 2rem;
+  padding: 1rem 10rem;
   width: 100%;
   z-index: 1000;
 }
@@ -132,35 +132,35 @@ nav a:hover {
 .social-icons {
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  right: 10rem;
   display: flex;
   gap: 1rem; /* Espaço entre os ícones */
   z-index: 2;
 }
 
-.icon {
-  width: 70px;
-  height: 70px;
-  background-color: white;
-  border-radius: 50%;
+.social-icons .icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 4px solid var(--off-white);
   text-decoration: none;
+
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* mais fluido */
+  will-change: transform;
 }
 
-.icon:hover {
+.social-icons .icon i {
+  font-size: 32px;
+  color: var(--off-white);
+  text-shadow: 0.5px 0.5px 0 var(--off-white);
+}
+
+.social-icons .icon:hover {
   transform: scale(1.08);
-}
-
-.icon img {
-  width: 36px;
-  height: 36px;
-  object-fit: contain;
-  pointer-events: none;
-  user-select: none;
 }
 
 .hero {
@@ -188,7 +188,7 @@ nav a:hover {
   top: 70%;
   transform: translateY(-50%);
   width: 100%;
-  padding: 0 2rem;
+  padding: 0 10rem;
 }
 
 .hero-content h1 {
