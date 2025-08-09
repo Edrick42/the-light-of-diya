@@ -355,7 +355,7 @@ nav a:hover {
 .posts {
     display: flex;
     flex-direction: column;
-    gap: 50px; /* espaço entre os artigos */
+    gap: 2rem; /* espaço entre os artigos */
     padding: 0 5vw; /* margem lateral */
 }
 
@@ -363,7 +363,6 @@ nav a:hover {
     height: 100vh; /* ocupa a altura da tela */
     background-size: cover;
     background-position: center;
-    border-radius: 20px;
     position: relative;
     overflow: hidden;
 }
