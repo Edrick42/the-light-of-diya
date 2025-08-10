@@ -5,5 +5,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('blog/', include('blog.urls')),
-    path('', views.index),  # rota raiz
+    path('', views.index, name='index'),  # rota raiz
 ]
