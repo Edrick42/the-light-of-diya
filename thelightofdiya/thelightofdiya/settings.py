@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'thelightofdiya',
     'header',
     'blog',
+    'portfolio',
     'articles',
     'footer',
 ]

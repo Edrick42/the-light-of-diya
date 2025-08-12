@@ -304,7 +304,7 @@ nav a:hover {
 
 .portfolio {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 20px;           /* espaço entre as imagens */
   padding: 2rem 5rem;    /* margem interna nas laterais */
   align-items: flex-start; /* alinha pelo topo */
@@ -313,11 +313,70 @@ nav a:hover {
   background-color: var(--off-white); 
 }
 
-.project {
-  flex: 1;       /* largura fixa para 3 colunas (aprox 1/3 cada) */
+.project-content {
+  width: 100%;       /* ocupa toda a largura */
+  margin: 10rem 0rem; /* espaço entre texto e imagens */
+  text-align: start;  /* se quiser centralizar o texto */
+}
+
+.project-content h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--soft-black);
+}
+
+.project-content p {
+  font-size: 1.5rem;
+  color: var(--light-black);
+  width: 50%;
+}
+
+
+.project-content-sub {
+  width: 100%;       /* ocupa toda a largura */
+  margin: 0rem 0rem 4rem; /* espaço entre texto e imagens */
+  text-align: start;  /* se quiser centralizar o texto */
+}
+
+.project-content-sub h1 {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: var(--soft-black);
+}
+.project-content-sub.list {
+  padding: 8rem 0; /* espaçamento interno */
+}
+
+.project-content-sub.list h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.project-content-sub p {
+  font-size: 1.25rem;
+  color: var(--light-black);
+  width: 50%;
+}
+
+.project-content-sub.list p {
+  font-size: 1.25rem;
+  color: var(--light-black);
+  width: 80%;
+}
+
+.project-list {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  flex-direction: row; /* organiza as imagens em linha */
+  gap: 20px;           /* espaço entre as imagens */
+  width: 100%;         /* ocupa toda a largura */
+}
+
+.project {
+  flex: 1;  
 }
 
 .project.main {
@@ -329,6 +388,10 @@ nav a:hover {
   height: 400px;
   object-fit: cover;
   display: block;
+}
+
+.project.big img {
+  height: 800px;
 }
 
 .vertical-button {
