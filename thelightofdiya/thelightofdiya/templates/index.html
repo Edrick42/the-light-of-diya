@@ -2,7 +2,7 @@
 
 {% block title %}The Light Of Diya{% endblock %}
 {% block content %}
-    <section class="hero">
+    <section id="hero" class="hero">
         {% load static %}
         <video autoplay muted loop playsinline class="background-video">
             <source src="{% static 'assets/videos/hero.mov' %}" type="video/mp4">
@@ -39,7 +39,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section id="about" class="about">
         <h1>Visual writer, everyday observer, image and meaning maker.</h1>
         <p>
             Through The Light of Diya, Andréa shares fragments of the world — small records that reveal beauty, sensitivity, and narrative in all that is simple and real.
@@ -53,7 +53,9 @@
         <div class="project-list">
             <div class="project main">
                 <img src="{% static 'assets/images/project1.jpg' %}" alt="Projeto 1">
-                <button class="vertical-button">Portfolio</button>
+                <button class="vertical-button" onclick="window.location.href='/portfolio/'">
+                    Portfolio
+                </button>
             </div>
             <div class="project">
                 <img src="{% static 'assets/images/project2.jpg' %}" alt="Projeto 2">
@@ -70,7 +72,7 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section id="contact" class="contact">
         <h1>Contact me!</h1>
         <p>
             Feel free to reach out for collaborations, inquiries, or just to say hello. 
