@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Blog Pessoal",
+    "description": "Um blog feito em Django e PostgreSQL",
+    "image": "assets/images/project1.jpg"
+  },
+  {
+    "title": "App de Tarefas",
+    "description": "Aplicação de gerenciamento de tarefas com autenticação",
+    "image": "assets/images/project2.jpg"
+  },
+  {
+    "title": "App de Tarefas",
+    "description": "Aplicação de gerenciamento de tarefas com autenticação",
+    "image": "assets/images/project3.jpg"
+  }
+]

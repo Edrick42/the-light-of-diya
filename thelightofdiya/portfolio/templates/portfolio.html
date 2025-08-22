@@ -10,15 +10,11 @@
             <p>As a UGC creator, I craft natural, story-driven visuals and videos that reflect real connection — made to feel, not just to sell.</p>
         </div>
         <div class="project-list">
+            {% for project in projects %}
             <div class="project big">
-                <img src="{% static 'assets/images/project1.jpg' %}" alt="Projeto 1">
+                <img src="{% static project.image %}" alt="{{ project.title }}">
             </div>
-            <div class="project big">
-                <img src="{% static 'assets/images/project2.jpg' %}" alt="Projeto 2">
-            </div>
-            <div class="project big">
-                <img src="{% static 'assets/images/project3.jpg' %}" alt="Projeto 3">
-            </div>
+            {% endfor %}
         </div>
         <div class="project-list">
             <div class="project-content-sub list">
@@ -35,4 +31,5 @@
             </div>
         </div>
     </section>
+    <script async src="https://www.instagram.com/embed.js"></script>
 {% endblock %}
