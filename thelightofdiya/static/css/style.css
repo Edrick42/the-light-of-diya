@@ -118,6 +118,10 @@ header {
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
+body {
+  background-color: var(--off-white);
+}
+
 nav {
   width: 100%;
   font-family: "Proza Libre", sans-serif;
@@ -483,19 +487,24 @@ nav a:hover {
   color: var(--red-chai);
 }
 
-.posts {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem; /* espaço entre os artigos */
-    padding: 0 5vw; /* margem lateral */
+.posts-container {
+  padding-top: 5rem;
+  margin-left: 5%;
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  background-color: var(--off-white);
 }
 
 .post {
-    height: 100vh; /* ocupa a altura da tela */
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
+  flex: 1;
+  min-width: 49%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay {
@@ -503,14 +512,37 @@ nav a:hover {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: flex-end;
-    padding: 40px;
+    align-items: flex-start;
+    flex-flow: column;
+    padding: 2rem 2rem;
     box-sizing: border-box;
 }
 
 .overlay h2 {
-    font-size: 2rem;
+    font-family: "Proza Libre", sans-serif;
+    font-size: 2.5rem;
     margin: 0;
+    color: var(--off-white);
+}
+
+.overlay h3 {
+    font-family: "Proza Libre", sans-serif;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    margin: 0;
+    color: var(--off-white);
+    width: 50%;
+}
+
+.overlay .post-content {
+  padding: 1rem;
+  background-color: var(--off-white);
+  width: 60%;
+}
+
+.overlay .post-content p {
+  color: var(--soft-black);
+  font-size: 1.1rem;
 }
 
 .footer {
