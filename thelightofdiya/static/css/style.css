@@ -557,6 +557,28 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
+.post-detail {
+  padding: 0rem 5rem;
+  background-color: var(--off-white);
+  color: var(--soft-black);
+}
+
+.post-detail img {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+
+.post-detail h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.post-detail h2 {
+  font-size: 1.25rem;
+  font-weight: normal;
+}
+
 .footer {
   background-color: var(--off-white);
   padding: 1rem;
