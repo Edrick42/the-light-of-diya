@@ -1,7 +1,7 @@
 <header>
     <nav>
         <ul>
-            {% if request.resolver_match.url_name == 'blog' %}
+            {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'blog_post' %}
                 <li><a href="/">Home</a></li>
                 <li><a href="/blog/">Blog</a></li>
             {% elif request.resolver_match.url_name == 'portfolio' %}
