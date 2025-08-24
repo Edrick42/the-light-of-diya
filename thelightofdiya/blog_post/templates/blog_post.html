@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Blog - The Light Of Diya{% endblock %}
+
+{% block content %}
+<article class="post-detail">
+    <h1>{{ post.title }}</h1>
+    <h2>{{ post.subtitle }}</h2>
+    <div class="content">
+        {{ post.content|linebreaks }}
+    </div>
+</article>
+{% endblock %}

@@ -42,8 +42,8 @@ INSTALLED_APPS = [
     'thelightofdiya',
     'header',
     'blog',
+    'blog_post',
     'portfolio',
-    'articles',
     'footer',
 ]
 

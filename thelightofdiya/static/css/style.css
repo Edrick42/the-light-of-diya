@@ -507,7 +507,18 @@ nav a:hover {
   align-items: center;
 }
 
-.overlay {
+.post .overlay a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+
+.post .overlay a:hover {
+    text-decoration: none;
+}
+
+.post .overlay {
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
     height: 100%;
@@ -518,29 +529,30 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-.overlay h2 {
+.post .overlay h2 {
     font-family: "Proza Libre", sans-serif;
     font-size: 2.5rem;
     margin: 0;
     color: var(--off-white);
 }
 
-.overlay h3 {
+.post .overlay h3 {
     font-family: "Proza Libre", sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: lighter;
     margin: 0;
     color: var(--off-white);
-    width: 50%;
+    width: 60%;
 }
 
-.overlay .post-content {
+.post .overlay .post-content {
+  margin-top: 1rem;
   padding: 1rem;
   background-color: var(--off-white);
   width: 60%;
 }
 
-.overlay .post-content p {
+.post .overlay .post-content p {
   color: var(--soft-black);
   font-size: 1.1rem;
 }
