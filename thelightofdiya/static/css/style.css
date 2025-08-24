@@ -108,14 +108,14 @@ html {
 header {
   position: fixed;
   display: flex;
-  flex-direction: row; 
+  flex-direction: column; /* no mobile, menu empilhado */
   align-items: center;
-  justify-content: space-between; 
-  padding: 1rem 10rem;
+  justify-content: center;
+  padding: 1rem; /* padding menor */
   width: 100%;
   z-index: 1000;
   background-color: var(--off-white);
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* borda só embaixo */
 }
 
 body {
@@ -166,17 +166,20 @@ nav a:hover {
   position: absolute;
   top: 0;
   left: 0;
-  min-width: 100%;
-  min-height: 100%;
-  object-fit: cover;
-  z-index: -1;
+  width: 100%;       /* ocupa toda a largura da tela */
+  height: 100%;      /* ocupa toda a altura do container */
+  object-fit: cover; /* corta o vídeo mantendo proporção, como background */
+  z-index: -1;       /* fica atrás do conteúdo */
+  overflow: hidden;
 }
 
 .hero-header {
   display: flex;
-  align-items: center;     /* Alinha verticalmente */
-  justify-content: space-between; /* Título à esquerda, ícones à direita */
-  padding: 4rem 10rem;
+  align-items: start;     /* Alinha verticalmente */
+  justify-content: flex-start; /* Título à esquerda, ícones à direita */
+  flex-direction: column;
+  padding: 4rem 1rem;
+  gap: 1rem;
 }
 
 .hero-title {
@@ -188,7 +191,7 @@ nav a:hover {
 }
 
 .hero-title h1 {
-  font-size: 5rem;
+  font-size: 2.5rem;
   font-style: italic;
   justify-content: center;
 }
@@ -203,8 +206,8 @@ nav a:hover {
   align-items: center;
   justify-content: center;
 
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 4px solid var(--off-white);
   text-decoration: none;
@@ -214,7 +217,7 @@ nav a:hover {
 }
 
 .social-icons .icon i {
-  font-size: 36px;
+  font-size: 24px;
   color: var(--off-white);
 
   transition: color 0.3s ease, font-size 0.3s ease;
@@ -240,24 +243,24 @@ nav a:hover {
   text-align: start;
 
   display: flex;
-  flex-direction: column;      /* organiza verticalmente */
-  justify-content: flex-end;   /* empurra para o fundo */
+  flex-direction: column;      
+  justify-content: flex-end;
 
   width: 100%;
-  height: 100%; /* necessário para o alinhamento vertical */
-  padding: 0 10rem 16rem; /* 2rem de padding no bottom */
+  height: 100%; 
+  padding: 1rem 1rem 10rem; 
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
   color: var(--off-white);
-  width: 40%;
+  width: 80%;
 }
 
 .talk-button {
@@ -296,7 +299,7 @@ nav a:hover {
   text-align: center;         /* centraliza o texto */
 
   width: 100%;
-  height: 100vh;              /* ocupa a altura da tela */
+  min-height: 100vh;              /* ocupa a altura da tela */
   padding: 0 15rem;
 }
 
@@ -437,7 +440,7 @@ nav a:hover {
   text-align: center;         /* centraliza o texto */
 
   width: 100%;
-  height: 100vh;              /* ocupa a altura da tela */
+  min-height: 100vh;              /* ocupa a altura da tela */
   padding: 0 15rem;
 }
 
@@ -604,4 +607,52 @@ nav a:hover {
 
 .footer-icons a:hover {
   color: var(--soft-black);
+}
+
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 3rem;
+  }  
+
+  .hero-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;     /* Alinha verticalmente */
+    justify-content: space-between; /* Título à esquerda, ícones à direita */
+    padding: 4rem 10rem;
+  }
+
+  .social-icons .icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .social-icons .icon i {
+    font-size: 36px;
+  }
+
+  .hero-title h1 {
+    font-size: 5rem; 
+  } 
+
+  .hero-content {
+    padding: 0 10rem 16rem; /* 2rem de padding no bottom */
+  }
+
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.25rem;
+    width: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    padding: 1rem 10rem;
+  }
 }
