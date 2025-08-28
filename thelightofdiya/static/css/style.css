@@ -93,6 +93,11 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Fraunces", serif;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .line {
   border: none;
   height: 1px;
@@ -106,6 +111,7 @@ html {
 }
 
 header {
+  height: 50px;
   position: fixed;
   display: flex;
   flex-direction: column; /* no mobile, menu empilhado */
@@ -324,9 +330,9 @@ nav a:hover {
 }
 
 .project-content {
-  width: 100%;       /* ocupa toda a largura */
-  margin: 10rem 0rem; /* espaço entre texto e imagens */
-  text-align: start;  /* se quiser centralizar o texto */
+  width: 100%;       
+  margin: 5rem 0rem; 
+  text-align: start;  
 }
 
 .project-content h1 {
@@ -344,9 +350,7 @@ nav a:hover {
 }
 
 .project-content-sub {
-  width: 100%;       /* ocupa toda a largura */
   margin: 0rem 0rem 4rem; /* espaço entre texto e imagens */
-  text-align: start;  /* se quiser centralizar o texto */
 }
 
 .project-content-sub h1 {
@@ -622,7 +626,21 @@ nav a:hover {
 
 @media (min-width: 1200px) {
   header {
-    padding: 1rem 10rem;
+    padding: 0rem 10rem;
+  }
+
+  .logo-title {
+    display: none;
+    font-family: "Fraunces", serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--cinnamon-toast);
+    font-style: italic;
+    width: 100%;
+  }
+
+  .logo-title.show {
+    display: block;
   }
 
   .hero-header {
@@ -690,15 +708,62 @@ nav a:hover {
   }
 
   .project-list {
+    flex-direction: row;
     gap: 20px;
   }
   
-  .project-content-sub h1 {
+  .project-content {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+  }
+  
+  .project-content.header {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 5rem;
+    gap: 1rem;
+  }
+  
+  .project-content.footer {
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+  }
+  
+  .project-content.footer h1 {
     font-size: 4rem;
+    color: var(--red-chai);
+    font-style: italic; 
+  }
+  
+  .project-content.footer p {
+    text-align: center;
+    width: 35%;
+  }
+  
+  .project-content-sub {
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .project-content-sub h1 {
+    font-size: 3.5rem;
+    text-align: center;
   }
 
   .project-content-sub p {
-    width: 50%;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+  }
+
+  .project-content-sub.header p {
+    width: 40%;
   }
 
 }

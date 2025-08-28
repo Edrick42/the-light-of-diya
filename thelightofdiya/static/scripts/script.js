@@ -18,3 +18,31 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         history.pushState(null, '', `#${id}`);
     });
 });
+
+window.onload = function() {
+    console.log("Página totalmente carregada!");
+
+    const logoTitle = document.querySelector(".logo-title");
+
+    if (!logoTitle) return;
+
+    if (window.location.pathname !== "/") {
+        logoTitle.classList.add("show");
+    }
+};
+
+window.addEventListener("scroll", function() {
+    if (window.location.pathname !== "/") {
+        return;
+    }
+
+    const logoTitle = document.querySelector(".logo-title");
+
+    if (!logoTitle) return;
+
+    if (window.scrollY > 100) {
+        logoTitle.classList.add("show");
+    } else {
+        logoTitle.classList.remove("show");
+    }
+});
