@@ -1,4 +1,4 @@
-<header>
+<header class="header-desktop">
     <div class="logo-title">
         <h4><a href="/">The Light Of Diya</a></h4>
     </div>
@@ -18,5 +18,27 @@
                 <li><a href="#contact">Contact</a></li>
             {% endif %}            
         </ul>
+    </nav>
+</header>
+
+<header class="header-mobile">
+    <div class="logo-title">
+        <h4><a href="/">The Light Of Diya</a></h4>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
+    <nav class="menu-side-bar" id="nav">
+    {% if request.resolver_match.url_name == 'blog' or request.resolver_match.url_name == 'blog_post' %}
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+    {% elif request.resolver_match.url_name == 'portfolio' %}
+        <a href="/">Home</a>
+        <a href="/portfolio/">Portfolio</a>
+    {% else %}
+        <a href="/">Home</a>
+        <a href="#about">About</a>
+        <a href="/blog/">Blog</a>
+        <a href="/portfolio/">Portfolio</a>
+        <a href="#contact">Contact</a>
+    {% endif %}  
     </nav>
 </header>

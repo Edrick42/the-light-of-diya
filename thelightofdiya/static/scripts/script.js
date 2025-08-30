@@ -36,13 +36,22 @@ window.addEventListener("scroll", function() {
         return;
     }
 
-    const logoTitle = document.querySelector(".logo-title");
+    const logoTitles = document.querySelectorAll(".logo-title"); // pega todos
 
-    if (!logoTitle) return;
+    if (!logoTitles.length) return; // se não tiver nenhum, sai
 
-    if (window.scrollY > 100) {
-        logoTitle.classList.add("show");
-    } else {
-        logoTitle.classList.remove("show");
-    }
+    logoTitles.forEach((logoTitle) => {
+        if (window.scrollY > 100) {
+            logoTitle.classList.add("show");
+        } else {
+            logoTitle.classList.remove("show");
+        }
+    });
+});
+
+const toggle = document.getElementById("menu-toggle");
+const nav = document.getElementById("nav");
+
+toggle.addEventListener("click", () => {
+    nav.classList.toggle("active");
 });

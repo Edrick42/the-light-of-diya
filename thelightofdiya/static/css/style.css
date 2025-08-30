@@ -124,36 +124,71 @@ header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* borda só embaixo */
 }
 
+.header-mobile {
+  display: flex;
+  justify-content: end;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--off-white);
+  color: var(--cinnamon-toast);
+}
+
+.header-desktop {
+  display: none;
+}
+
+.logo-title {
+  display: none;
+  font-family: "Fraunces", serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--cinnamon-toast);
+  font-style: italic;
+  width: 100%;
+}
+
+.menu-toggle {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--cinnamon-toast);
+  background: none;
+  border: none;
+}
+
+.logo-title.show {
+  display: block;
+}
+  
 body {
   background-color: var(--off-white);
 }
 
-nav {
-  width: 100%;
-  font-family: "Proza Libre", sans-serif;
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-
-nav ul {
-  list-style: none;
+.header-mobile nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
+  background: var(--off-white);
   display: flex;
-  flex-direction: row;     /* Coloca os itens em uma linha */
-  justify-content: flex-end; /* Alinha os itens à direita */
-  gap: 1rem;               /* Espaço entre os itens */
-  padding: 0;
-  margin: 0;
+  flex-direction: column;
+  padding-top: 4rem;
+  gap: 1.5rem;
+
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
 }
 
-nav a {
-  text-decoration: none;
-  color: var(--light-black);
-  font-weight: 500;
-  transition: color 0.3s ease;
+.header-mobile nav.active {
+  transform: translateX(0);
 }
 
-nav a:hover {
-  color: var(--red-chai);
+.header-mobile nav a {
+  font-family: "Proza Libre", sans-serif;
+  padding: 0rem 1.5rem;
+  font-size: 1.25rem;
+  color: var(--cinnamon-toast);
 }
 
 .hero {
@@ -310,12 +345,12 @@ nav a:hover {
 
 .about h1 {
   font-size: 2rem;
-  margin: 1rem;
+  margin: 1rem 0rem;
 }
 
 .about p {
   font-size: 1.25rem;
-  margin: 1.5rem 1rem;
+  margin: 1.5rem 0rem;
 }
 
 .portfolio {
@@ -628,19 +663,43 @@ nav a:hover {
   header {
     padding: 0rem 10rem;
   }
-
-  .logo-title {
-    display: none;
-    font-family: "Fraunces", serif;
-    font-weight: 600;
-    font-size: 1.5rem;
-    color: var(--cinnamon-toast);
-    font-style: italic;
-    width: 100%;
+  
+  .header-desktop {
+    display: flex;
+    align-content: center;
   }
 
-  .logo-title.show {
-    display: block;
+  .header-mobile {
+    display: none;
+  }
+
+  nav {
+    display: block; 
+    font-family: "Proza Libre", sans-serif;
+    width: 100%;
+    font-weight: 400;
+    font-size: 0.9rem;
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;     /* Coloca os itens em uma linha */
+    justify-content: flex-end; /* Alinha os itens à direita */
+    gap: 1rem;               /* Espaço entre os itens */
+    padding: 0;
+    margin: 0;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--light-black);
+    font-weight: 500;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: var(--red-chai);
   }
 
   .hero-header {
