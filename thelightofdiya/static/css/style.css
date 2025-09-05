@@ -111,7 +111,7 @@ html {
 }
 
 header {
-  height: 50px;
+  height: 80px;
   position: fixed;
   display: flex;
   flex-direction: column; /* no mobile, menu empilhado */
@@ -142,14 +142,14 @@ header {
   display: none;
   font-family: "Fraunces", serif;
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   color: var(--cinnamon-toast);
   font-style: italic;
   width: 100%;
 }
 
 .menu-toggle {
-  font-size: 1.5rem;
+  font-size: 3.5rem;
   cursor: pointer;
   color: var(--cinnamon-toast);
   background: none;
@@ -194,7 +194,7 @@ body {
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   overflow: hidden;
 }
 
@@ -219,7 +219,7 @@ body {
   align-items: start;     /* Alinha verticalmente */
   justify-content: flex-start; /* Título à esquerda, ícones à direita */
   flex-direction: column;
-  padding: 4rem 1rem;
+  padding: 100px 1rem;
   gap: 1rem;
 }
 
@@ -232,7 +232,7 @@ body {
 }
 
 .hero-title h1 {
-  font-size: 2.5rem;
+  font-size: 5rem;
   font-style: italic;
   justify-content: center;
 }
@@ -247,10 +247,10 @@ body {
   align-items: center;
   justify-content: center;
 
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  border: 4px solid var(--off-white);
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  border: 6px solid var(--off-white);
   text-decoration: none;
 
   transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1); /* suave */
@@ -258,7 +258,7 @@ body {
 }
 
 .social-icons .icon i {
-  font-size: 24px;
+  font-size: 54px;
   color: var(--off-white);
 
   transition: color 0.3s ease, font-size 0.3s ease;
@@ -293,12 +293,12 @@ body {
 }
 
 .hero-content h1 {
-  font-size: 1.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  font-size: 1rem;
+  font-size: 1.8rem;
   margin-bottom: 2rem;
   color: var(--off-white);
   width: 80%;
@@ -309,11 +309,11 @@ body {
   align-items: center;
   justify-content: center;
 
-  width: 250px;  
-  height: 60px;
+  width: 350px;  
+  height: 100px;
   background-color: var(--off-white); /* Replace with your color */
   color: var(--cardamom);
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
   text-decoration: none;
 
@@ -330,26 +330,26 @@ body {
   position: relative;
   z-index: 1;
   background-color: var(--off-white);
-  color: var(--your-text-color); /* ajuste se necessário */
+  color: var(--your-text-color); 
 
   display: flex;
   flex-direction: column;
   align-items: center;       
   justify-content: start;    
-  text-align: left;        
+  text-align: center;        
 
   width: 100%;
-  min-height: auto;              /* ocupa a altura da tela */
-  padding: 0 1rem;
+  min-height: auto;              
+  padding: 1rem 1rem;
 }
 
 .about h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   margin: 1rem 0rem;
 }
 
 .about p {
-  font-size: 1.25rem;
+  font-size: 2rem;
   margin: 1.5rem 0rem;
 }
 
@@ -389,7 +389,7 @@ body {
 }
 
 .project-content-sub h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 400;
   line-height: 1;
   margin-bottom: 1rem;
@@ -406,7 +406,7 @@ body {
 }
 
 .project-content-sub p {
-  font-size: 1.25rem;
+  font-size: 2rem;
   color: var(--light-black);
   width: 100%;
 }
@@ -482,8 +482,7 @@ body {
   text-align: center;         /* centraliza o texto */
 
   width: 100%;
-  min-height: 100vh;              /* ocupa a altura da tela */
-  padding: 0 15rem;
+  min-height: 60vh;              /* ocupa a altura da tela */
 }
 
 .contact h1 {
@@ -662,6 +661,7 @@ body {
 @media (min-width: 1200px) {
   header {
     padding: 0rem 10rem;
+    height: 50px;
   }
   
   .header-desktop {
@@ -700,6 +700,10 @@ body {
 
   nav a:hover {
     color: var(--red-chai);
+  }
+
+  .hero {
+    height: 100vh;
   }
 
   .hero-header {
@@ -821,8 +825,28 @@ body {
     text-align: center;
   }
 
+  .project-content-sub.main {
+    text-align: left;
+    align-content: left;
+    justify-content: left;
+  }
+
+  .project-content-sub.main h1 {
+    text-align: left;
+  }
+
+  .project-content-sub.main p {
+    text-align: left;
+    width: 40%;
+    margin-left: 0;
+  }
+
   .project-content-sub.header p {
     width: 40%;
   }
 
+  .contact {
+    min-height: 100vh;   
+    padding: 0 15rem;           
+  }
 }
